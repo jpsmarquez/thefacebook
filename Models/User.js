@@ -5,13 +5,10 @@ const userSchema = new Schema(
     first_name:String,
     last_name: String,
     password: String,
-    birthday: String,
+    birthday: Date,
     gender: String,
-    posts:[String],
+    friends:[{
+      type:Schema.Types.ObjectId
+    }]
   },
-  {
-    friends:[
-        type:Schema.Types.ObjectId,
-    ]
-  }
 )
